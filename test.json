@@ -1,4 +1,16 @@
-#ideal structure of data
+#teacher repo help
+https://gist.github.com/capywebformations/ac60e5e9d452bad878d9e59f0a8c6bf8
+
+#doc for some help
+https://axios-http.com/docs/intro
+https://cheerio.js.org/
+https://pptr.dev/
+https://playwright.dev/
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON
+https://nodejs.org/en/learn/modules/anatomy-of-an-http-transaction
+
+
+#ideal structure of data for the no scrapping strategy
 {
     "cours_id": "MATH_2024_01_15_08h00",
     "nom": "Mathématiques",
@@ -8,3 +20,2583 @@
     "salle": "A101",
     "professeur": "M. Dupont"
 }
+
+
+#ideal structure of data for the scrapping strategy
+https://github.com/prisma/prisma/discussions/23055
+
+back submitted
+
+j'ai trouver ça dans reponse reseau c'est ce qui me semble etre la meilleure piste, je peu me tromper car encore une fois je suis novice, qu'en pense tu ? ```{
+    "id": "FonctionParametres",
+    "session": 9811451,
+    "no": "BF11A02A26FB1F05D3BD65EAE43D472C",
+    "dataSec": {
+        "data": {
+            "parametreGeneral": {
+                "URLEspace": "/hp/etudiant",
+                "avecLogoConnexion": false,
+                "avecAuthentification": true,
+                "precisionNotation": 100,
+                "baremeNotation": {
+                    "_T": 10,
+                    "V": "20"
+                },
+                "baremeMoyenneGeneraleAnnuelle": {
+                    "_T": 10,
+                    "V": "20"
+                },
+                "baremeMaxDevoirs": {
+                    "_T": 10,
+                    "V": "999"
+                },
+                "seuilNotation": {
+                    "_T": 10,
+                    "V": "10"
+                },
+                "surplusBareme": {
+                    "_T": 10,
+                    "V": "1"
+                },
+                "AvecGestionQCM": true,
+                "AvecGestionEtudiants": true,
+                "AvecGestionParents": true,
+                "AvecGestionStages": true,
+                "AvecGestionAlternances": false,
+                "afficherAbbreviationNiveauDAcquisition": false,
+                "avecGestionEchelleNotation": true,
+                "avecSmtpConfigure": true,
+                "avecForum": false,
+                "AvecAide": true,
+                "UrlAide": {
+                    "_T": 23,
+                    "V": "https://doc.index-education.com/index.php?p=FR&lg=fr&l=hp&m=2025&e=6&c=%s&cl=%s"
+                },
+                "urlSiteIndexEducation": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=LogoHP&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants"
+                },
+                "urlInfosHebergement": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=InfosHeb&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants"
+                },
+                "accessibiliteNonConforme": true,
+                "urlDeclarationAccessibilite": "https://www.index-education.com/fr/schema-pluriannuel-accessibilite-numerique.php#declaration-accessibilite",
+                "UrlVersion": {
+                    "_T": 23,
+                    "V": "&copy; INDEX-EDUCATION.COM / HYPERPLANNING 2025.5.6"
+                },
+                "urlFAQEnregistrementDoubleAuth": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=DoubleAuthentification&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "urlTutoVideoSecurite": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=securiser_son_compte&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "urlTutoEnregistrerAppareils": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=EnregistrerAppareils&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "Version": {
+                    "_T": 23,
+                    "V": "HYPERPLANNING 2025.5.6"
+                },
+                "millesime": "2025",
+                "Jour": {
+                    "_T": 7,
+                    "V": "14/09/2025"
+                },
+                "NonPlace": 288,
+                "AvecSite": false,
+                "AvecFamilleDeSalle": true,
+                "PremierLundi": {
+                    "_T": 7,
+                    "V": "18/08/2025"
+                },
+                "DerniereDate": {
+                    "_T": 7,
+                    "V": "30/08/2026"
+                },
+                "JoursOuvres": {
+                    "_T": 8,
+                    "V": "[1..6]"
+                },
+                "PeriodeCloturee": {
+                    "_T": 8,
+                    "V": "[]"
+                },
+                "NombreJoursOuvres": 6,
+                "SemainesFeriees": {
+                    "_T": 8,
+                    "V": "[19..20]"
+                },
+                "JoursFeries": {
+                    "_T": 11,
+                    "V": "[76,86,127..140,232,257,264,270,281,331,363]"
+                },
+                "PlacesParHeure": 4,
+                "PlacesParJour": 48,
+                "DureeSequence": 0.0416666666666667,
+                "DebPauseDejeune": 16,
+                "FinPauseDejeune": 16,
+                "RessourcesAvecDP": {
+                    "_T": 26,
+                    "V": "[]"
+                },
+                "AvecGestionPhotos": false,
+                "nombreContenusMax": 500,
+                "minBaremeQuestionQCM": 1,
+                "maxBaremeQuestionQCM": 20,
+                "maxNbPointQCM": 100,
+                "maxNiveauQCM": 3,
+                "AvecRecuperationInfosConnexion": false,
+                "Police": "arial,helvetica,sans-serif",
+                "taillePolice": "13px",
+                "estHebergeEnFrance": true,
+                "listeAnnotationsAutorisees": {
+                    "_T": 26,
+                    "V": "[1..7]"
+                },
+                "langue": "fr",
+                "langID": 1036,
+                "listeLangues": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "langID": 1036,
+                            "description": "Fran\u00E7ais"
+                        },
+                        {
+                            "langID": 1040,
+                            "description": "Italiano"
+                        },
+                        {
+                            "langID": 1033,
+                            "description": "English"
+                        }
+                    ]
+                },
+                "ListeSalles": []
+            },
+            "parametres": {
+                "Divers": [
+                    {
+                        "G": 0,
+                        "BloquerReferencementEspacesDansMoteurRecherche": false,
+                        "NomEtablissement": "CAMPUS PARIS PIGIER - MY DIGITAL SCHOOL"
+                    }
+                ],
+                "Espace": [
+                    {
+                        "G": 6,
+                        "Theme": 2,
+                        "EnteteNom": "Espace \u00C9tudiants",
+                        "NumeroGenreRecherche": 0
+                    }
+                ],
+                "MentionsLegales": [
+                    {
+                        "G": 0,
+                        "AdresseEtablissement": "",
+                        "FormeJuridique": "",
+                        "Hebergeur": "",
+                        "HebergeurIndex": "INDEX \u00C9DUCATION\nCS 90001 13388 Marseille Cedex 13\nT\u00E9l. (33) 04 96 15 21 70\nFax. (33) 04 96 15 00 06",
+                        "InformationsComplementaires": "<div style=\"font-family: Montserrat; font-size: 11px;\"><p>Le fonctionnement de HYPERPLANNING est garanti par l'utilisation de cookies fonctionnels, ces cookies sont n\u00E9cessaires au fonctionnement du site. Le d\u00E9p\u00F4t de ces cookies ne requiert pas votre consentement pr\u00E9alable. Ces cookies ne sont envoy\u00E9s qu'au serveur HYPERPLANNING auquel vous \u00EAtes connect\u00E9. Ces cookies permettent :</p><ul><li style=\"font-family: Montserrat; font-size: 11px;\">l'authentification aupr\u00E8s du service, d'assurer la s\u00E9curit\u00E9 du m\u00E9canisme d'authentification, et de limiter les tentatives d'acc\u00E8s robotis\u00E9es ou inattendues (nom du cookie&nbsp;: CASTGC)&nbsp;;</li><li style=\"font-family: Montserrat; font-size: 11px;\">la personnalisation de la langue utilis\u00E9e lors de vos visites sur le site (nom du cookie : ielang).</li></ul></div>",
+                        "Publie": true,
+                        "ResponsablePublication": ""
+                    }
+                ],
+                "Personnel": [
+                    {
+                        "G": 0,
+                        "AutorisationDocumentsATelecharger": {
+                            "_T": 11,
+                            "V": "[]"
+                        },
+                        "AvecExportICAL": true
+                    }
+                ],
+                "PlanningGeneral": [
+                    {
+                        "G": 0,
+                        "GenreLibelleGrille": 0,
+                        "NumeroPremiereSemaine": 1
+                    }
+                ],
+                "Ressource": [
+                    {
+                        "G": 0,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 1,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "RechercheSecondaire": [
+                            {
+                                "G": 1,
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 2,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": false,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "RechercheSecondaire": [
+                            {
+                                "G": 1,
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 3,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 7,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    }
+                ]
+            },
+            "tableauVersion": [
+                2025,
+                5,
+                6
+            ],
+            "couleurFond": "#FFFFFF",
+            "ChallengeBis": {
+                "_T": 23,
+                "V": "\u00A4\u20AC\u0153\\P\"\u2122\u00C8(p\u001F\u00EF\u0018F\u00E9+"
+            },
+            "nomCookieAppli": "validationAppliMobile",
+            "aideContextuelle": {}
+        },
+        "nom": "FonctionParametres",
+        "Signature": {
+            "ModeExclusif": false
+        }
+    }
+}```
+
+j'ai trouver ça dans reponse reseau c'est ce qui me semble etre la meilleure piste, je peu me tromper car encore une fois je suis novice, qu'en pense tu ? ```{
+    "id": "FonctionParametres",
+    "session": 9811451,
+    "no": "BF11A02A26FB1F05D3BD65EAE43D472C",
+    "dataSec": {
+        "data": {
+            "parametreGeneral": {
+                "URLEspace": "/hp/etudiant",
+                "avecLogoConnexion": false,
+                "avecAuthentification": true,
+                "precisionNotation": 100,
+                "baremeNotation": {
+                    "_T": 10,
+                    "V": "20"
+                },
+                "baremeMoyenneGeneraleAnnuelle": {
+                    "_T": 10,
+                    "V": "20"
+                },
+                "baremeMaxDevoirs": {
+                    "_T": 10,
+                    "V": "999"
+                },
+                "seuilNotation": {
+                    "_T": 10,
+                    "V": "10"
+                },
+                "surplusBareme": {
+                    "_T": 10,
+                    "V": "1"
+                },
+                "AvecGestionQCM": true,
+                "AvecGestionEtudiants": true,
+                "AvecGestionParents": true,
+                "AvecGestionStages": true,
+                "AvecGestionAlternances": false,
+                "afficherAbbreviationNiveauDAcquisition": false,
+                "avecGestionEchelleNotation": true,
+                "avecSmtpConfigure": true,
+                "avecForum": false,
+                "AvecAide": true,
+                "UrlAide": {
+                    "_T": 23,
+                    "V": "https://doc.index-education.com/index.php?p=FR&lg=fr&l=hp&m=2025&e=6&c=%s&cl=%s"
+                },
+                "urlSiteIndexEducation": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=LogoHP&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants"
+                },
+                "urlInfosHebergement": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=InfosHeb&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants"
+                },
+                "accessibiliteNonConforme": true,
+                "urlDeclarationAccessibilite": "https://www.index-education.com/fr/schema-pluriannuel-accessibilite-numerique.php#declaration-accessibilite",
+                "UrlVersion": {
+                    "_T": 23,
+                    "V": "&copy; INDEX-EDUCATION.COM / HYPERPLANNING 2025.5.6"
+                },
+                "urlFAQEnregistrementDoubleAuth": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=DoubleAuthentification&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "urlTutoVideoSecurite": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=securiser_son_compte&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "urlTutoEnregistrerAppareils": {
+                    "_T": 23,
+                    "V": "https://www.index-education.com/redirect.php?produit=hp&page=EnregistrerAppareils&version=2025.5.6.0&distrib=FR&lg=fr&flag=HttpMobile_Etudiants&type=LienDocProduit"
+                },
+                "Version": {
+                    "_T": 23,
+                    "V": "HYPERPLANNING 2025.5.6"
+                },
+                "millesime": "2025",
+                "Jour": {
+                    "_T": 7,
+                    "V": "14/09/2025"
+                },
+                "NonPlace": 288,
+                "AvecSite": false,
+                "AvecFamilleDeSalle": true,
+                "PremierLundi": {
+                    "_T": 7,
+                    "V": "18/08/2025"
+                },
+                "DerniereDate": {
+                    "_T": 7,
+                    "V": "30/08/2026"
+                },
+                "JoursOuvres": {
+                    "_T": 8,
+                    "V": "[1..6]"
+                },
+                "PeriodeCloturee": {
+                    "_T": 8,
+                    "V": "[]"
+                },
+                "NombreJoursOuvres": 6,
+                "SemainesFeriees": {
+                    "_T": 8,
+                    "V": "[19..20]"
+                },
+                "JoursFeries": {
+                    "_T": 11,
+                    "V": "[76,86,127..140,232,257,264,270,281,331,363]"
+                },
+                "PlacesParHeure": 4,
+                "PlacesParJour": 48,
+                "DureeSequence": 0.0416666666666667,
+                "DebPauseDejeune": 16,
+                "FinPauseDejeune": 16,
+                "RessourcesAvecDP": {
+                    "_T": 26,
+                    "V": "[]"
+                },
+                "AvecGestionPhotos": false,
+                "nombreContenusMax": 500,
+                "minBaremeQuestionQCM": 1,
+                "maxBaremeQuestionQCM": 20,
+                "maxNbPointQCM": 100,
+                "maxNiveauQCM": 3,
+                "AvecRecuperationInfosConnexion": false,
+                "Police": "arial,helvetica,sans-serif",
+                "taillePolice": "13px",
+                "estHebergeEnFrance": true,
+                "listeAnnotationsAutorisees": {
+                    "_T": 26,
+                    "V": "[1..7]"
+                },
+                "langue": "fr",
+                "langID": 1036,
+                "listeLangues": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "langID": 1036,
+                            "description": "Fran\u00E7ais"
+                        },
+                        {
+                            "langID": 1040,
+                            "description": "Italiano"
+                        },
+                        {
+                            "langID": 1033,
+                            "description": "English"
+                        }
+                    ]
+                },
+                "ListeSalles": []
+            },
+            "parametres": {
+                "Divers": [
+                    {
+                        "G": 0,
+                        "BloquerReferencementEspacesDansMoteurRecherche": false,
+                        "NomEtablissement": "CAMPUS PARIS PIGIER - MY DIGITAL SCHOOL"
+                    }
+                ],
+                "Espace": [
+                    {
+                        "G": 6,
+                        "Theme": 2,
+                        "EnteteNom": "Espace \u00C9tudiants",
+                        "NumeroGenreRecherche": 0
+                    }
+                ],
+                "MentionsLegales": [
+                    {
+                        "G": 0,
+                        "AdresseEtablissement": "",
+                        "FormeJuridique": "",
+                        "Hebergeur": "",
+                        "HebergeurIndex": "INDEX \u00C9DUCATION\nCS 90001 13388 Marseille Cedex 13\nT\u00E9l. (33) 04 96 15 21 70\nFax. (33) 04 96 15 00 06",
+                        "InformationsComplementaires": "<div style=\"font-family: Montserrat; font-size: 11px;\"><p>Le fonctionnement de HYPERPLANNING est garanti par l'utilisation de cookies fonctionnels, ces cookies sont n\u00E9cessaires au fonctionnement du site. Le d\u00E9p\u00F4t de ces cookies ne requiert pas votre consentement pr\u00E9alable. Ces cookies ne sont envoy\u00E9s qu'au serveur HYPERPLANNING auquel vous \u00EAtes connect\u00E9. Ces cookies permettent :</p><ul><li style=\"font-family: Montserrat; font-size: 11px;\">l'authentification aupr\u00E8s du service, d'assurer la s\u00E9curit\u00E9 du m\u00E9canisme d'authentification, et de limiter les tentatives d'acc\u00E8s robotis\u00E9es ou inattendues (nom du cookie&nbsp;: CASTGC)&nbsp;;</li><li style=\"font-family: Montserrat; font-size: 11px;\">la personnalisation de la langue utilis\u00E9e lors de vos visites sur le site (nom du cookie : ielang).</li></ul></div>",
+                        "Publie": true,
+                        "ResponsablePublication": ""
+                    }
+                ],
+                "Personnel": [
+                    {
+                        "G": 0,
+                        "AutorisationDocumentsATelecharger": {
+                            "_T": 11,
+                            "V": "[]"
+                        },
+                        "AvecExportICAL": true
+                    }
+                ],
+                "PlanningGeneral": [
+                    {
+                        "G": 0,
+                        "GenreLibelleGrille": 0,
+                        "NumeroPremiereSemaine": 1
+                    }
+                ],
+                "Ressource": [
+                    {
+                        "G": 0,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 1,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "RechercheSecondaire": [
+                            {
+                                "G": 1,
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 2,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": false,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "RechercheSecondaire": [
+                            {
+                                "G": 1,
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 3,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    },
+                    {
+                        "G": 7,
+                        "ActiverPeriodeConsultation": true,
+                        "Affichage": [
+                            {
+                                "G": 0,
+                                "NumeroAffichage": 0
+                            },
+                            {
+                                "G": 2,
+                                "AfficherCoursNonPlace": true,
+                                "NumeroAffichage": 2
+                            },
+                            {
+                                "G": 3,
+                                "NumeroAffichage": 3
+                            }
+                        ],
+                        "AfficherDomainePresence": true,
+                        "AfficherZonesIndisponibilites": true,
+                        "AvecChoixPeriodeCalendrier": false,
+                        "AvecExportICAL": false,
+                        "DebutJournee": true,
+                        "FinJournee": true,
+                        "NePasAfficherDemiJournee": false,
+                        "NePasAfficherSequences": false,
+                        "Recherche": [
+                            {
+                                "G": 0,
+                                "IntituleRecherche": "Saisie du code",
+                                "NumeroGenreRecherche": 0,
+                                "Position": 1
+                            },
+                            {
+                                "G": 1,
+                                "IntituleRecherche": "Saisie du nom",
+                                "NumeroGenreRecherche": 1,
+                                "Position": 0
+                            }
+                        ],
+                        "SaisieNomDansListe": false
+                    }
+                ]
+            },
+            "tableauVersion": [
+                2025,
+                5,
+                6
+            ],
+            "couleurFond": "#FFFFFF",
+            "ChallengeBis": {
+                "_T": 23,
+                "V": "\u00A4\u20AC\u0153\\P\"\u2122\u00C8(p\u001F\u00EF\u0018F\u00E9+"
+            },
+            "nomCookieAppli": "validationAppliMobile",
+            "aideContextuelle": {}
+        },
+        "nom": "FonctionParametres",
+        "Signature": {
+            "ModeExclusif": false
+        }
+    }
+}```
+
+6
+Identifier les vraies requêtes qui contiennent les données de cours
+
+7
+Guider pour trouver l'API qui récupère les données de planning
+
+6
+Identifier les vraies requêtes qui contiennent les données de cours
+
+7
+Guider pour trouver l'API qui récupère les données de planning
+
+Identifier les vraies requêtes qui contiennent les données de cours
+
+7
+Guider pour trouver l'API qui récupère les données de planning
+
+🎯 Excellente trouvaille ! Cette réponse FonctionParametres est très utile mais ce n'est pas encore celle qui contient les cours.
+
+📊 Analyse de ce JSON :
+✅ Ce que vous avez trouvé :
+
+Configuration système d'Hyperplanning
+Session ID : 9811451 (important !)
+Paramètres de l'établissement : "CAMPUS PARIS PIGIER - MY DIGITAL SCHOOL"
+Dates importantes :
+Jour actuel : "14/09/2025"
+Premier lundi : "18/08/2025"
+Dernière date : "30/08/2026"
+Structure des horaires : PlacesParHeure: 4, PlacesParJour: 48
+❌ Ce qui manque encore :
+
+Les données de cours (matières, horaires, salles)
+Les emplois du temps concrets
+🔍 Prochaines étapes pour trouver les vraies données :
+1. Cherchez d'autres requêtes réseau
+Maintenant que vous avez la session ID (9811451), cherchez dans Network des requêtes qui contiennent :
+
+Cette session ID
+Des mots-clés comme : planning, cours, emploi, donnees
+2. Endpoints probables à surveiller :
+/hp/etudiant/donneesPlanning
+/hp/etudiant/planning
+/hp/donneesCalendrier
+/hp/appelDonnees
+3. Actions à faire :
+Naviguez vers une autre semaine dans votre planning
+Observez les nouvelles requêtes dans Network
+Filtrez par XHR/Fetch avec la session ID
+Pouvez-vous essayer de changer de semaine ou de jour dans votre planning Hyperplanning et me dire quelles nouvelles requêtes apparaissent ?
+
+C'est là que nous trouverons les vraies données de cours ! 🚀
+
+Feedback submitted
+
+je crois que j'ai enfin trouver ```{
+    "id": "PageAccueil",
+    "session": 9811451,
+    "no": "4AE2F4EF87BF905E6FABB240B049D2FF",
+    "dataSec": {
+        "data": {
+            "PeriodeConsultation": {
+                "_T": 8,
+                "V": "[1..62]"
+            },
+            "listeCours": {
+                "ListeCours": [
+                    {
+                        "N": "10#CA0hnKQWBvmWfDWB_dxMOcf1dwnB_K0mm4-oesF6wik",
+                        "G": 4,
+                        "p": 162,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#aqGhL7swlbcrdS6wL_L2s96oYLeXFcRv1e41MAGv1aI",
+                        "G": 4,
+                        "p": 0,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#o5T-wcHgqzaM1dgjBgrRusNCYn52jKNY9bVpiT6XrRI",
+                        "G": 4,
+                        "p": 144,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#h2kqJrT_mRp3OtnsuSogCUYbvKKy0AzwKdenwXcfjJE",
+                        "G": 4,
+                        "p": 18,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#qGs04hFpHz8cFFJ64otxdzad0QmOS2B1bi2L23v-B0A",
+                        "G": 4,
+                        "p": 48,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#FGZkuIZAO8FGfV9_zoKL2haGApP28eeV4NpRUzYEg-A",
+                        "G": 4,
+                        "p": 96,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "TEAMS B",
+                                        "N": "50#ToG0CwiKBBWjtIpU5N0Nvq-nTwI3b7UyqRVcW-ot9VU",
+                                        "P": 594,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#j7msDSLFXUw64_nvyw_LVbe29UL17_Bv6dxi3Xl8nio",
+                        "G": 4,
+                        "p": 114,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "TEAMS B",
+                                        "N": "50#ToG0CwiKBBWjtIpU5N0Nvq-nTwI3b7UyqRVcW-ot9VU",
+                                        "P": 594,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#2AfXN9eF6x5WrD7s3h_c9hjMEyQ3VajkSLqVbfq4y3U",
+                        "G": 4,
+                        "p": 66,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#9495CA",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Workshop Crazy Dev",
+                                    "N": "25#zO8Rg4RA2jhsmah4Tg7exoP0-WWrMW9urRzvF1Tldus",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#Y51g92aaXvJrOKmGeW2XdsU5z7M0R4SaKUX8mFvSqB4",
+                        "G": 4,
+                        "p": 192,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#7CB927",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Conception Logiciel UML",
+                                    "N": "25#GdckWKvXCXRw-y8z7acd5Hq6SG6keJCJZqkrFOrDDFA",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "BEN AMOR",
+                                        "N": "50#F1CdmEB8Bn70oEeOXr5dom9-RMyEH-yDwcOjOMwrv90",
+                                        "P": 41,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#Zdk7npj0UGWVdlGL_MEkf1U3TKVWuNTDbssVgmC89Xo",
+                        "G": 4,
+                        "p": 210,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#7CB927",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Conception Logiciel UML",
+                                    "N": "25#GdckWKvXCXRw-y8z7acd5Hq6SG6keJCJZqkrFOrDDFA",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "BEN AMOR",
+                                        "N": "50#F1CdmEB8Bn70oEeOXr5dom9-RMyEH-yDwcOjOMwrv90",
+                                        "P": 41,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#3GJh9DfEVwPZl3Yu6JXOq2OmFdY8f8xe3OCTRjx4wxA",
+                        "G": 5,
+                        "p": 0,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#7CB927",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Conception Logiciel UML",
+                                    "N": "25#GdckWKvXCXRw-y8z7acd5Hq6SG6keJCJZqkrFOrDDFA",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "BEN AMOR",
+                                        "N": "50#F1CdmEB8Bn70oEeOXr5dom9-RMyEH-yDwcOjOMwrv90",
+                                        "P": 41,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#05cb4QrzF2zEQVBrbQuLAdviPucgi3Q_gNOLIt7C2j8",
+                        "G": 5,
+                        "p": 210,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#A2C62B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "API",
+                                    "N": "25#goVfW1Rlrvn7fqiS1SWXKOQttl3-AfsEq5BsdPKymrs",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "CROGNIER",
+                                        "N": "50#k_P8g2b_tw_3hB9oPvQfNYeAbquRPPTTUfObKtNpr5s",
+                                        "P": 104,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#9a5v6E8yXfQ5CCZ-tdqTpGQJ6o4AjqlGw_3IvRRXvzc",
+                        "G": 5,
+                        "p": 48,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#ED679B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "SQL",
+                                    "N": "25#6ebXPagr55Dgj05LS9_4CJcr3ZKZgAKG3qGGaOiTheU",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#GVH6Klvb6yne2ra1k6xcRNo-UCWGhR_i79uZBN3jUrg",
+                        "G": 5,
+                        "p": 66,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#ED679B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "SQL",
+                                    "N": "25#6ebXPagr55Dgj05LS9_4CJcr3ZKZgAKG3qGGaOiTheU",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#4G3w1i-clt9h9_Pl6QVJa49qpwfYnvmPZzseIoLymSs",
+                        "G": 5,
+                        "p": 18,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#7CB927",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "Conception Logiciel UML",
+                                    "N": "25#GdckWKvXCXRw-y8z7acd5Hq6SG6keJCJZqkrFOrDDFA",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "BEN AMOR",
+                                        "N": "50#F1CdmEB8Bn70oEeOXr5dom9-RMyEH-yDwcOjOMwrv90",
+                                        "P": 41,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#i6NSU9jx0AxnS0l9nNyIudF9-WUcMd80Cxlrv5NB_gs",
+                        "G": 5,
+                        "p": 144,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#A2C62B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "API",
+                                    "N": "25#goVfW1Rlrvn7fqiS1SWXKOQttl3-AfsEq5BsdPKymrs",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "CROGNIER",
+                                        "N": "50#k_P8g2b_tw_3hB9oPvQfNYeAbquRPPTTUfObKtNpr5s",
+                                        "P": 104,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#puKLq8vTiEhKRG6WdpGiyEDDj06sn3dsh2j86yfubLM",
+                        "G": 5,
+                        "p": 162,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#A2C62B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "API",
+                                    "N": "25#goVfW1Rlrvn7fqiS1SWXKOQttl3-AfsEq5BsdPKymrs",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "CROGNIER",
+                                        "N": "50#k_P8g2b_tw_3hB9oPvQfNYeAbquRPPTTUfObKtNpr5s",
+                                        "P": 104,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#h7ssD_c8_q-rxtxOk7pO6nHd6syyINZ53TEKkOV0Aqo",
+                        "G": 5,
+                        "p": 114,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#ED679B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "SQL",
+                                    "N": "25#6ebXPagr55Dgj05LS9_4CJcr3ZKZgAKG3qGGaOiTheU",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#snyZM8Hr7KYOAE21zNCX71_2XmgWd9JuBUVb59JWb98",
+                        "G": 5,
+                        "p": 192,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#A2C62B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "API",
+                                    "N": "25#goVfW1Rlrvn7fqiS1SWXKOQttl3-AfsEq5BsdPKymrs",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "CROGNIER",
+                                        "N": "50#k_P8g2b_tw_3hB9oPvQfNYeAbquRPPTTUfObKtNpr5s",
+                                        "P": 104,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    },
+                    {
+                        "N": "10#EXRqg7GmRyahBVPCzyt01pCHN-Hptx_cSLEpVFylEdY",
+                        "G": 5,
+                        "p": 96,
+                        "d": 14,
+                        "e": 3,
+                        "co": "#ED679B",
+                        "nbE": 16,
+                        "listeC": [
+                            {
+                                "G": 0,
+                                "C": {
+                                    "L": "SQL",
+                                    "N": "25#6ebXPagr55Dgj05LS9_4CJcr3ZKZgAKG3qGGaOiTheU",
+                                    "G": 0,
+                                    "p": true
+                                }
+                            },
+                            {
+                                "G": 1,
+                                "C": [
+                                    {
+                                        "L": "LEDOUX",
+                                        "N": "50#tQkPOOUtUBFxg1DZBH872eEkeadBkr-tWuthh1fq0ZU",
+                                        "P": 233,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 13,
+                                "C": [
+                                    {
+                                        "L": "MDS - B3 DEV TITRE 6 CONCEPTEUR DEVELOPPEUR D'APPLICATIONS",
+                                        "N": "50#hv3NkIrJzaU64IWr1Jyq8hy-5XnrtF1BYedRWV0S-Uc",
+                                        "P": 416,
+                                        "p": true
+                                    }
+                                ]
+                            },
+                            {
+                                "G": 3,
+                                "C": [
+                                    {
+                                        "L": "6",
+                                        "N": "50#w4ypxRm_JedWiMWWTRELTE38ta18exPS4v-CE59_zx8",
+                                        "P": 533,
+                                        "p": true
+                                    }
+                                ]
+                            }
+                        ],
+                        "avecVisio": false
+                    }
+                ],
+                "ListeAnnulationsCours": [],
+                "OrdreContenuDuCours": [
+                    0,
+                    1,
+                    13,
+                    12,
+                    14,
+                    15,
+                    3,
+                    7,
+                    22,
+                    11
+                ],
+                "disponibilites": {},
+                "stages": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "entreprise": {
+                                "_T": 24,
+                                "V": {
+                                    "L": "SAS GC SERVICES",
+                                    "N": "19#xC5dI8eBUi09UFuImAz-dfBEcYOx4eH6xqazZunTvUo"
+                                }
+                            },
+                            "estAlternance": false,
+                            "jours": {
+                                "_T": 24,
+                                "V": [
+                                    {
+                                        "G": 1,
+                                        "L": "Lun.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 2,
+                                        "L": "Mar.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 3,
+                                        "L": "Mer.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 4,
+                                        "L": "Jeu.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 5,
+                                        "L": "Ven.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 6,
+                                        "L": "Sam.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 7,
+                                        "L": "Dim.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "listeProchainsCoursAnnules": {
+                "ListeCours": [],
+                "ListeAnnulationsCours": [],
+                "OrdreContenuDuCours": [
+                    0,
+                    1,
+                    13,
+                    12,
+                    14,
+                    15,
+                    3,
+                    7,
+                    22,
+                    11
+                ],
+                "disponibilites": {},
+                "stages": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "entreprise": {
+                                "_T": 24,
+                                "V": {
+                                    "L": "SAS GC SERVICES",
+                                    "N": "19#xC5dI8eBUi09UFuImAz-dfBEcYOx4eH6xqazZunTvUo"
+                                }
+                            },
+                            "estAlternance": false,
+                            "jours": {
+                                "_T": 24,
+                                "V": [
+                                    {
+                                        "G": 1,
+                                        "L": "Lun.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 2,
+                                        "L": "Mar.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 3,
+                                        "L": "Mer.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 4,
+                                        "L": "Jeu.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 5,
+                                        "L": "Ven.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 6,
+                                        "L": "Sam.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 7,
+                                        "L": "Dim.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "lienUtile": {
+                "listeLiens": {
+                    "_T": 24,
+                    "V": []
+                }
+            },
+            "listeDevoirs": {
+                "_T": 24,
+                "V": []
+            },
+            "ListeAbsences": [],
+            "listeRetards": {
+                "_T": 24,
+                "V": []
+            },
+            "listeExecutionsQCM": {
+                "_T": 24,
+                "V": []
+            },
+            "evaluationEnseignements": {
+                "message": "Donnez votre avis sur les enseignements"
+            },
+            "listeServices": {
+                "_T": 24,
+                "V": []
+            },
+            "taf": {
+                "dateDebutAffichageTaf": {
+                    "_T": 7,
+                    "V": "14/09/2025"
+                },
+                "dateFinAffichageTaf": {
+                    "_T": 7,
+                    "V": "22/09/2025"
+                },
+                "ListeCours": [],
+                "ListeAnnulationsCours": [],
+                "OrdreContenuDuCours": [
+                    0,
+                    1,
+                    13,
+                    12,
+                    14,
+                    15,
+                    3,
+                    7,
+                    22,
+                    11
+                ],
+                "disponibilites": {},
+                "stages": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "entreprise": {
+                                "_T": 24,
+                                "V": {
+                                    "L": "SAS GC SERVICES",
+                                    "N": "19#xC5dI8eBUi09UFuImAz-dfBEcYOx4eH6xqazZunTvUo"
+                                }
+                            },
+                            "estAlternance": false,
+                            "jours": {
+                                "_T": 24,
+                                "V": [
+                                    {
+                                        "G": 1,
+                                        "L": "Lun.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 2,
+                                        "L": "Mar.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 3,
+                                        "L": "Mer.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 4,
+                                        "L": "Jeu.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 5,
+                                        "L": "Ven.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 6,
+                                        "L": "Sam.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 7,
+                                        "L": "Dim.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "oraux": {
+                "ListeCours": [],
+                "ListeAnnulationsCours": [],
+                "OrdreContenuDuCours": [
+                    0,
+                    1,
+                    13,
+                    12,
+                    14,
+                    15,
+                    3,
+                    7,
+                    22
+                ],
+                "disponibilites": {},
+                "stages": {
+                    "_T": 24,
+                    "V": [
+                        {
+                            "entreprise": {
+                                "_T": 24,
+                                "V": {
+                                    "L": "SAS GC SERVICES",
+                                    "N": "19#xC5dI8eBUi09UFuImAz-dfBEcYOx4eH6xqazZunTvUo"
+                                }
+                            },
+                            "estAlternance": false,
+                            "jours": {
+                                "_T": 24,
+                                "V": [
+                                    {
+                                        "G": 1,
+                                        "L": "Lun.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 2,
+                                        "L": "Mar.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 3,
+                                        "L": "Mer.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 4,
+                                        "L": "Jeu.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 5,
+                                        "L": "Ven.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 6,
+                                        "L": "Sam.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    },
+                                    {
+                                        "G": 7,
+                                        "L": "Dim.",
+                                        "horaires": {
+                                            "_T": 24,
+                                            "V": []
+                                        },
+                                        "enEntreprise": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            "listeProchainsDS": {
+                "_T": 24,
+                "V": []
+            },
+            "listeAppelEtudiant": {
+                "_T": 24,
+                "V": []
+            },
+            "estCtxEmargement": false
+        },
+        "nom": "PageAccueil"
+    }
+}```
+
+🎉 BINGO ! Vous avez trouvé l'API des cours !
+
+Guider pour trouver l'API qui récupère les données de planning
+
+8
+Analyser et décoder la structure des données de cours PageAccueil
+
+Analyser et décoder la structure des données de cours PageAccueil
+
+9
+Créer un service de scrapping pour extraire les données
+
+Cette API PageAccueil contient exactement ce qu'il nous faut ! 🎯
+
+📊 Décodage de la structure des données :
+Cours identifiés :
+
+Workshop Crazy Dev (Prof: LEDOUX)
+Conception Logiciel UML (Prof: BEN AMOR)
+API (Prof: CROGNIER)
+SQL (Prof: LEDOUX)
+Structure décodée :
+
+"p" = Position/horaire (0, 18, 48, 66, 96, 114, 144, 162, 192, 210...)
+"d" = Jour (14 = samedi 14/09)
+"G" = Type de cours (4, 5 = différents types)
+"co" = Couleur du cours
+"L" = Libellé (nom du cours/prof/salle)
+🛠️ Créons maintenant le service de scrapping !
+Étape 1 : Créez le dossier services
+
+bash
+mkdir src\services
+Étape 2 : Créez le fichier de scrapping Créez src/services/scraping.js avec ce contenu :
+
+javascript
+const axios = require('axios');
+
+class HyperplanningService {
+  constructor() {
+    this.baseURL = 'https://paris-02-2.hyperplanning.fr/hp';
+    this.sessionId = null;
+  }
+
+  async fetchScheduleData(identifiant) {
+    try {
+      // 1. Récupérer la page d'accueil avec les cours
+      const response = await axios.post(
+        `${this.baseURL}/etudiant`,
+        {
+          id: "PageAccueil",
+          identifiant: identifiant
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Cookie': 'ielang=1036'
+          }
+        }
+      );
+
+      return this.parseScheduleData(response.data);
+    } catch (error) {
+      console.error('Erreur scrapping:', error);
+      throw error;
+    }
+  }
+
+  parseScheduleData(data) {
+    const courses = [];
+    const listeCours = data.dataSec?.data?.listeCours?.ListeCours || [];
+
+    listeCours.forEach(cours => {
+      const courseData = this.extractCourseInfo(cours);
+      if (courseData) {
+        courses.push(courseData);
+      }
+    });
+
+    return courses;
+  }
+
+  extractCourseInfo(cours) {
+    // Extraire les informations du cours
+    const subject = cours.listeC?.find(c => c.G === 0)?.C?.L;
+    const teacher = cours.listeC?.find(c => c.G === 1)?.C?.[0]?.L;
+    const classroom = cours.listeC?.find(c => c.G === 3)?.C?.[0]?.L;
+    
+    if (!subject) return null;
+
+    return {
+      subject,
+      teacher,
+      classroom,
+      position: cours.p,
+      day: cours.d,
+      color: cours.co,
+      type: cours.G
+    };
+  }
+}
+
+module.exports = HyperplanningService;
+Voulez-vous que nous créions ce fichier ensemble et que nous le testions ?
+
+Ensuite nous pourrons mapper ces données vers votre schema Prisma ! 🚀
