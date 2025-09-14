@@ -1,0 +1,10 @@
+#ideal structure of data
+{
+    "cours_id": "MATH_2024_01_15_08h00",
+    "nom": "Mathématiques",
+    "date": "2024-01-15",
+    "heure_debut": "08:00",
+    "heure_fin": "10:00",
+    "salle": "A101",
+    "professeur": "M. Dupont"
+}
