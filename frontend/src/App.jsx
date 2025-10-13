@@ -1,96 +1,154 @@
-import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
+// import { useState, useEffect } from 'react'
 import viteLogo from '/vite.svg'
+import "@radix-ui/themes/styles.css"
 import './App.css'
-import { fetchPanelInformations } from './services/hyperplanning'
+// import { fetchPanelInformations } from './services/hyperplanning'
 import refreshData from './atoms/button'
+import dataSec from './services/no_services.json';
+import {useState } from 'react';
 
-function App() {
-  const [hyperplanningData, setHyperplanningData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+function App () {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  useEffect(() => {
-    const loadData = async () => {
-      try {
-        const result = await fetchPanelInformations();
-        setHyperplanningData(result);
-        console.log('Données reçues:', result);
-      } catch (error) {
-        console.error('Erreur lors du chargement:', error);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const chargerDonnees = async () => {
+    setLoading(true)
+    setError(null)
     
-    loadData();
-  }, []);
-
-  if (loading) return <div>Chargement des données...</div>;
-  
-  if (error) return <div>Erreur: {error}</div>;
+    try {
+      // Utilise le proxy Vite configuré dans vite.config.js
+      // L'API nécessite un POST avec des paramètres
+      const response = await fetch('/api/hp/appelpanneauinformations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          id: "PA3",
+          init: true
+        })
+      })
+      
+      if (!response.ok) {
+        throw new Error(`Erreur HTTP: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      console.log('✅ Données reçues:', result)
+      console.log('📚 Nombre de cours:', result.listeCours?.length || 0)
+      setData(result)
+    } catch (err) {
+      console.error('❌ Erreur lors du chargement:', err)
+      setError(err.message)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
-    <>
+    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+      <h1>📅 Hyperplanning - Emploi du temps</h1>
       
-      {/* Affichage des données brutes */}
-      <div style={{ margin: '20px 0', padding: '20px', border: '1px solid #ccc', borderRadius: '8px' }}>
-        <h2>Données Hyperplanning (brutes)</h2>
-        <pre style={{ 
-          background: '#f5f5f5', 
+      <button 
+        onClick={chargerDonnees} 
+        disabled={loading}
+        style={{ 
+          padding: '10px 20px', 
+          fontSize: '16px',
+          cursor: loading ? 'not-allowed' : 'pointer',
+          backgroundColor: loading ? '#ccc' : '#007bff',
+          color: 'white',
+          border: 'none',
+          borderRadius: '5px'
+        }}
+      >
+        {loading ? 'Chargement...' : 'Charger les données'}
+      </button>
+      
+      {error && (
+        <div style={{ 
+          marginTop: '20px', 
           padding: '15px', 
-          borderRadius: '4px', 
-          overflow: 'auto',
-          fontSize: '12px',
-          textAlign: 'left'
+          backgroundColor: '#ffebee', 
+          color: '#c62828',
+          borderRadius: '5px'
         }}>
-          {hyperplanningData ? JSON.stringify(hyperplanningData, null, 2) : 'Aucune donnée'}
-        </pre>
-      </div>
-
-      {/* Section pour les cours */}
-      <div style={{ margin: '20px 0', padding: '20px', border: '1px solid #ddd', borderRadius: '8px' }}>
-        <h2>Liste des Cours</h2>
-        {hyperplanningData?.listeCours?.length > 0 ? (
-          <div>
-            <p>Nombre de cours: {hyperplanningData.listeCours.length}</p>
-            <table style={{ width: '100%', borderCollapse: 'collapse', marginTop: '10px' }}>
-              <thead>
-                <tr style={{ backgroundColor: '#f0f0f0' }}>
-                  <th style={{ border: '1px solid #ddd', padding: '8px' }}>Horaires</th>
-                  <th style={{ border: '1px solid #ddd', padding: '8px' }}>Matière</th>
-                  <th style={{ border: '1px solid #ddd', padding: '8px' }}>Enseignant</th>
-                  <th style={{ border: '1px solid #ddd', padding: '8px' }}>Salle</th>
-                  <th style={{ border: '1px solid #ddd', padding: '8px' }}>Public</th>
-                </tr>
-              </thead>
-              <tbody>
-                {hyperplanningData.listeCours.map((cours, index) => (
-                  <tr key={index}>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{cours.horaires}</td>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{cours.matiere}</td>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{cours.enseignant}</td>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{cours.salle}</td>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{cours.public}</td>
+          <strong>Erreur:</strong> {error}
+        </div>
+      )}
+      
+      {data && (
+        <div style={{ marginTop: '20px' }}>
+          <h2>📊 Données de l'API</h2>
+          
+          {/* Affichage des cours */}
+          {data.listeCours && data.listeCours.length > 0 && (
+            <div style={{ marginBottom: '20px' }}>
+              <h3>📚 Liste des cours ({data.listeCours.length})</h3>
+              <table style={{ 
+                width: '100%', 
+                borderCollapse: 'collapse',
+                marginTop: '10px'
+              }}>
+                <thead>
+                  <tr style={{ backgroundColor: '#007bff', color: 'white' }}>
+                    <th style={{ border: '1px solid #ddd', padding: '10px' }}>Horaires</th>
+                    <th style={{ border: '1px solid #ddd', padding: '10px' }}>Matière</th>
+                    <th style={{ border: '1px solid #ddd', padding: '10px' }}>Professeur</th>
+                    <th style={{ border: '1px solid #ddd', padding: '10px' }}>Salle</th>
+                    <th style={{ border: '1px solid #ddd', padding: '10px' }}>Statut</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        ) : (
-          <div>
-            <p>📅 Aucun cours prévu pour aujourd'hui</p>
-            <p>Les prochains cours seront affichés demain !</p>
-          </div>
-        )}
-        <button onClick={refreshData} style={{ marginTop: '10px', padding: '8px 16px' }}>
-          🔄 Actualiser les cours
-        </button>
-      </div>
-
-    </>
+                </thead>
+                <tbody>
+                  {data.listeCours.map((cours, index) => (
+                    <tr key={index} style={{ 
+                      backgroundColor: cours.labelAnnule ? '#ffebee' : 'white',
+                      color: '#000' 
+                    }}>
+                      <td style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>
+                        {cours.deb} - {cours.fin}
+                      </td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>
+                        <strong>{cours.mat}</strong>
+                      </td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>
+                        {cours.prof?.join(', ') || 'N/A'}
+                      </td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>
+                        Salle {cours.sal?.join(', ') || 'N/A'}
+                      </td>
+                      <td style={{ border: '1px solid #ddd', padding: '8px', color: '#000' }}>
+                        {cours.labelAnnule ? '❌ ' + cours.labelAnnule : '✅ Confirmé'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          
+          {/* Affichage JSON brut */}
+          <details style={{ marginTop: '20px' }}>
+            <summary style={{ cursor: 'pointer', fontWeight: 'bold', color: '#000' }}>
+              🔍 Voir les données brutes (JSON)
+            </summary>
+            <pre style={{ 
+              background: '#f5f5f5', 
+              padding: '15px', 
+              borderRadius: '5px',
+              overflow: 'auto',
+              maxHeight: '400px',
+              fontSize: '12px',
+              color: '#000' // Texte noir
+            }}>
+              {JSON.stringify(data, null, 2)}
+            </pre>
+          </details>
+        </div>
+      )}
+    </div>
   )
 }
 
-export default App
+export default App;
