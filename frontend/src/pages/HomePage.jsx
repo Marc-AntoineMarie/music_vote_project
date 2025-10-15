@@ -34,6 +34,52 @@ function HomePage () {
       const result = await response.json()
       console.log('✅ Données reçues:', result)
       console.log('📚 Nombre de cours:', result.listeCours?.length || 0)
+
+      if (!result.listeCours || result.listeCours.length === 0) {
+        console.log('Auncun cours, cour de test pour le dev');
+        result.listeCours = [
+          {
+            deb: '09h00',
+            fin: '12h30',
+            mat: 'Workshop Crazy Dev',
+            prof: ['LEDOUX'],
+            sal: ['6'],
+            labelAnnule: null
+          },
+          {
+            deb: '13h30',
+            fin: '17h00',
+            mat: 'Conception Logiciel UML',
+            prof: ['BEN AMOR'],
+            sal: ['TEAMS B'],
+            labelAnnule: null
+          },
+          {
+            deb: '09h00',
+            fin: '12h30',
+            mat: 'API REST & GraphQL',
+            prof: ['CROGNIER'],
+            sal: ['8'],
+            labelAnnule: null
+          },
+          {
+            deb: '13h30',
+            fin: '17h00',
+            mat: 'Base de données SQL',
+            prof: ['MARTIN'],
+            sal: ['12'],
+            labelAnnule: null
+          },
+          {
+            deb: '09h00',
+            fin: '12h30',
+            mat: 'React & TypeScript',
+            prof: ['DUPONT'],
+            sal: ['TEAMS A'],
+            labelAnnule: null
+          }
+        ];
+      }
       setData(result)
     } catch (err) {
       console.error('❌ Erreur lors du chargement:', err)

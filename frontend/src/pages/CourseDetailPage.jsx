@@ -144,6 +144,84 @@ function CourseDetailPage() {
   });
 };
 
+/**
+* Incrémenter les votes d'une musique
+* @param {string} trackId - ID de la musique à incrémenter
+*/
+const incrementVote = (trackId) => {
+ console.log("⬆ Increment vote pour trackId:", trackId);
+ 
+ setMusicVotes((prevVotes) => {
+   const updatedVotes = { ...prevVotes };
+   
+   // Vérifier que le cours existe
+   if (!updatedVotes[courseId]) {
+     console.log(" Cours non trouvé");
+     return prevVotes;
+   }
+   
+   // Trouver la musique
+   const trackIndex = updatedVotes[courseId].findIndex(
+     (track) => track.trackId === trackId
+   );
+   
+   if (trackIndex >= 0) {
+     // Incrémenter les votes
+     updatedVotes[courseId][trackIndex].votes += 1;
+     console.log("✅ Vote incrémenté ! Total:", updatedVotes[courseId][trackIndex].votes);
+     
+     localStorage.setItem('musicVotes', JSON.stringify(updatedVotes));
+     console.log("💾 Données sauvegardées");
+   } else {
+     console.log("❌ Musique non trouvée");
+   }
+   
+   return updatedVotes;
+ });
+};
+
+/**
+* Décrémenter les votes d'une musique
+* @param {string} trackId - ID de la musique à décrémenter
+*/
+const decrementVote = (trackId) => {
+ console.log("⬇ Decrement vote pour trackId:", trackId);
+ 
+ setMusicVotes((prevVotes) => {
+   const updatedVotes = { ...prevVotes };
+   
+   // Vérifier que le cours existe
+   if (!updatedVotes[courseId]) {
+     console.log("Cours non trouvé");
+     return prevVotes;
+   }
+   
+   // Trouver la musique
+   const trackIndex = updatedVotes[courseId].findIndex(
+     (track) => track.trackId === trackId
+   );
+   
+   if (trackIndex >= 0) {
+     // Décrémenter les votes
+     updatedVotes[courseId][trackIndex].votes -= 1;
+     console.log("⬇ Vote décrémenté ! Total:", updatedVotes[courseId][trackIndex].votes);
+     
+     // Si les votes tombent à 0 ou moins, supprimer la musique
+     if (updatedVotes[courseId][trackIndex].votes <= 0) {
+       console.log("Suppression de la musique (votes = 0)");
+       updatedVotes[courseId].splice(trackIndex, 1);
+     }
+     
+     localStorage.setItem('musicVotes', JSON.stringify(updatedVotes));
+     console.log("Données sauvegardées");
+   } else {
+     console.log("Musique non trouvée");
+   }
+   
+   return updatedVotes;
+ });
+};
+
   return (
     
     <>
@@ -187,13 +265,55 @@ function CourseDetailPage() {
                       <span style={{ color: "#666" }}>{track.artistName}</span>
                     </div>
                     <div style={{ 
-                      fontSize: "24px", 
-                      fontWeight: "bold", 
-                      color: "#1DB954",
-                      minWidth: "60px",
-                      textAlign: "center"
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: "5px"
                     }}>
-                      ⬆ {track.votes}
+                      {/* Upvote */}
+                      <button onClick={() => incrementVote(track.trackId)}
+                      style={{
+                        backgroundColor: "#1DB954",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        padding: "5px 10px",
+                        fontSize: "18px",
+                        cursor: "pointer",
+                        fontWeight: "bold"
+                      }}
+                        onMouseOver={(e) => e.target.style.backgroundColor = "#1ed760"}
+                        onMouseOut={(e) => e.target.style.backgroundColor = "#1DB954"}
+                        >
+                        ⬆
+                      </button>
+                      {/* Vote counter */}
+                      <div style={{ 
+                        fontSize: "20px", 
+                        fontWeight: "bold", 
+                        color: "#333",
+                        minWidth: "40px",
+                        textAlign: "center"
+                      }}>
+                        {track.votes}
+                      </div>
+                      {/* Downvote */}
+                      <button onClick={() => decrementVote(track.trackId)}
+                      style={{
+                        backgroundColor: "#ff4444",
+                        color: "white",
+                        border: "none",
+                        borderRadius: "5px",
+                        padding: "5px 10px",
+                        fontSize: "18px",
+                        cursor: "pointer",
+                        fontWeight: "bold"
+                      }}
+                        onMouseOver={(e) => e.target.style.backgroundColor = "#ff6666"}
+                        onMouseOut={(e) => e.target.style.backgroundColor = "#ff4444"}
+                        >
+                        ⬇
+                      </button>
                     </div>
                   </div>
                 ))}
