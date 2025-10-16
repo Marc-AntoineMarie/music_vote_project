@@ -10,16 +10,13 @@ import {
   Row,
 } from "react-bootstrap";
 import { useState, useEffect } from "react";
-
-const clientId = import.meta.env.VITE_CLIENT_ID;
-const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
+import { useSpotify } from "../hooks/useSpotify";
+import { formatAlbumForVote } from "../services/spotifyService";
 
 function CourseDetailPage() {
-  const [searchInput, setSearchInput] = useState("");
-  const [accessToken, setAccessToken] = useState("");
-  const [albums, setAlbums] = useState([]);
   // localStorage charger au démarrage
   // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+  const { accessToken, albums, searchInput, setSearchInput, search } = useSpotify();
   const [musicVotes, setMusicVotes] = useState(() => { 
     const saved = localStorage.getItem('musicVotes');
 
@@ -41,71 +38,10 @@ function CourseDetailPage() {
   console.log("📚 courseId actuel:", courseId);
   console.log("📖 Cours actuel:", cours);
 
-  useEffect(() => {
-    let authParams = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body:
-        "grant_type=client_credentials&client_id=" +
-        clientId +
-        "&client_secret=" +
-        clientSecret,
-    };
-
-    fetch("https://accounts.spotify.com/api/token", authParams)
-      .then((result) => result.json())
-      .then((data) => {
-        setAccessToken(data.access_token);
-      });
-  }, []);
-
-  async function search() {
-    let artistParams = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + accessToken,
-      },
-    };
-
-    // Get Artist
-    const artistID = await fetch(
-      "https://api.spotify.com/v1/search?q=" + searchInput + "&type=artist",
-      artistParams
-    )
-      .then((result) => result.json())
-      .then((data) => {
-        return data.artists.items[0].id;
-      });
-
-    // Get Artist Albums
-    await fetch(
-      "https://api.spotify.com/v1/artists/" +
-        artistID +
-        "/albums?include_groups=album&market=US&limit=50",
-      artistParams
-    )
-      .then((result) => result.json())
-      .then((data) => {
-        setAlbums(data.items);
-      });
-  }
-
   const addMusicVote = (album) => {
 
-    // Objet track avec infos sur l'album
-    const newTrack = {
-      trackId: album.id,                                    // ID unique Spotify
-      trackName: album.name,                                // Nom de l'album
-      artistName: album.artists?.[0]?.name || "Inconnu",   // Premier artiste (ou "Inconnu" si pas d'artiste)
-      albumImage: album.images?.[0]?.url || "",            // Image de couverture (ou vide si pas d'image)
-      albumUrl: album.external_urls?.spotify || "",        // Lien Spotify (ou vide si pas de lien)
-      votes: 1,                                             // Commence avec 1 vote
-      addedAt: Date.now()                                   // Timestamp pour savoir quand ajouté
-    };
-
+    const newTrack = formatAlbumForVote(album);
+    
     console.log("Ajout de:", newTrack.trackName);
 
     // Maj state avec callback fonction
