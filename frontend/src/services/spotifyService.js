@@ -1,7 +1,8 @@
-const clientId = import.meta.env.VITE_CLIENT_ID;
+    const clientId = import.meta.env.VITE_CLIENT_ID;
 const clientSecret = import.meta.env.VITE_CLIENT_SECRET;
 
 export const getAccessToken = async () => {
+    try {
         let authParams = {
           method: "POST",
           headers: {
@@ -15,44 +16,66 @@ export const getAccessToken = async () => {
         };
     
         const result = await fetch("https://accounts.spotify.com/api/token", authParams);
+
+        if (!result.ok) {
+            throw new Error(`Erreur HTTP: ${result.status}`)
+        }
           const data = await result.json();
           return data.access_token;
+    } catch (error) {
+      console.error('Erreur lors de la récupération du token spotify:', error);
+      throw error;
+    }
 };
 
 export const searchArtistAlbums = async (searchInput, accessToken) => {
-    
-    let artistParams = {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: "Bearer " + accessToken,
-      },
-    };
-
-    // Get Artist
-    const artistID = await fetch(
-      "https://api.spotify.com/v1/search?q=" + searchInput + "&type=artist",
-      artistParams
-    )
-      .then((result) => result.json())
-      .then((data) => {
-        return data.artists.items[0].id;
-      });
-
-    // Get Artist Albums
-    const albums = await fetch(
-      "https://api.spotify.com/v1/artists/" +
-        artistID +
-        "/albums?include_groups=album&market=US&limit=50",
-      artistParams
-    )
-      .then((result) => result.json())
-      .then((data) => {
-        return data.items;
-      });
-
-      return albums;
-};
+    try {
+      let artistParams = {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + accessToken,
+        },
+      };
+  
+      // Get Artist
+      const artistResponse = await fetch(
+        "https://api.spotify.com/v1/search?q=" + searchInput + "&type=artist",
+        artistParams
+      );
+  
+      if (!artistResponse.ok) {
+        throw new Error(`Erreur recherche artiste: ${artistResponse.status}`);
+      }
+  
+      const artistData = await artistResponse.json();
+      
+      if (!artistData.artists.items || artistData.artists.items.length === 0) {
+        console.warn("⚠️ Aucun artiste trouvé pour:", searchInput);
+        return [];
+      }
+  
+      const artistID = artistData.artists.items[0].id;
+  
+      // Get Artist Albums
+      const albumsResponse = await fetch(
+        "https://api.spotify.com/v1/artists/" +
+          artistID +
+          "/albums?include_groups=album&market=US&limit=50",
+        artistParams
+      );
+  
+      if (!albumsResponse.ok) {
+        throw new Error(`Erreur récupération albums: ${albumsResponse.status}`);
+      }
+  
+      const albumsData = await albumsResponse.json();
+      return albumsData.items || [];
+    } catch (error) {
+      console.error("❌ Erreur lors de la recherche Spotify:", error);
+      throw error;
+    }
+  };
 
 export const formatAlbumForVote = (album) => {
 

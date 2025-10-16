@@ -1,6 +1,8 @@
 import "./CourseDetailPage.css";
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
-
+import { useMusicVotes } from '../hooks/useMusicVote';
+import { useSpotify } from "../hooks/useSpotify";
+import { useState, useEffect } from "react";
 import {
   FormControl,
   InputGroup,
@@ -9,26 +11,13 @@ import {
   Card,
   Row,
 } from "react-bootstrap";
-import { useState, useEffect } from "react";
-import { useSpotify } from "../hooks/useSpotify";
-import { formatAlbumForVote } from "../services/spotifyService";
 
 function CourseDetailPage() {
   // localStorage charger au démarrage
   // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-  const { accessToken, albums, searchInput, setSearchInput, search } = useSpotify();
-  const [musicVotes, setMusicVotes] = useState(() => { 
-    const saved = localStorage.getItem('musicVotes');
-
-    if (saved) {
-      console.log("Données chargées depuis localStorage:", JSON.parse(saved));
-      return JSON.parse(saved);
-    }
-
-    console.log("Aucune données trouvées dans localStorage");
-    return {};
-  });
+  const { accessToken, albums, searchInput, setSearchInput, search, error, loading } = useSpotify();
   const { courseId } = useParams() // ID depuis l'URL
+  const { musicVotes, addMusicVote, incrementVote, decrementVote } = useMusicVotes(courseId);
   const location = useLocation()   // Données passées
   const navigate = useNavigate()   // Pour retourner
   
@@ -37,126 +26,6 @@ function CourseDetailPage() {
   console.log("🎵 Etat actuel de musicVotes:", musicVotes);
   console.log("📚 courseId actuel:", courseId);
   console.log("📖 Cours actuel:", cours);
-
-  const addMusicVote = (album) => {
-
-    const newTrack = formatAlbumForVote(album);
-    
-    console.log("Ajout de:", newTrack.trackName);
-
-    // Maj state avec callback fonction
-    // https://react.dev/reference/react/useState#updating-state-based-on-the-previous-state
-    setMusicVotes((prevVotes) => {
-      const updatedVotes = { ...prevVotes };
-
-      // Array vide si !cour
-      if (!updatedVotes[courseId]) {
-        updatedVotes[courseId] = [];
-        console.log("Creation de la liste pour le cours:", courseId);
-      }
-
-      const existingTrackIndex = updatedVotes[courseId].findIndex(
-        (track) => track.trackId === newTrack.trackId
-      );
-
-      if (existingTrackIndex >= 0) {
-        updatedVotes[courseId][existingTrackIndex].votes += 1;
-        console.log("✅ Vote incrémenté ! Total:", updatedVotes[courseId][existingTrackIndex].votes);
-      } else {
-        updatedVotes[courseId].push(newTrack);
-        console.log("🆕 Nouvelle musique ajoutée !");
-      }
-    
-
-    console.log("Etat complet:", updatedVotes);
-
-    // Sauvegarder dans localStorage
-    // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
-    // JSON.stringify convertit l'objet JS en texte
-    localStorage.setItem('musicVotes', JSON.stringify(updatedVotes));
-    console.log("Donnees sauvegardees dans localStorage");
-    
-    return updatedVotes;
-  });
-};
-
-/**
-* Incrémenter les votes d'une musique
-* @param {string} trackId - ID de la musique à incrémenter
-*/
-const incrementVote = (trackId) => {
- console.log("⬆ Increment vote pour trackId:", trackId);
- 
- setMusicVotes((prevVotes) => {
-   const updatedVotes = { ...prevVotes };
-   
-   // Vérifier que le cours existe
-   if (!updatedVotes[courseId]) {
-     console.log(" Cours non trouvé");
-     return prevVotes;
-   }
-   
-   // Trouver la musique
-   const trackIndex = updatedVotes[courseId].findIndex(
-     (track) => track.trackId === trackId
-   );
-   
-   if (trackIndex >= 0) {
-     // Incrémenter les votes
-     updatedVotes[courseId][trackIndex].votes += 1;
-     console.log("✅ Vote incrémenté ! Total:", updatedVotes[courseId][trackIndex].votes);
-     
-     localStorage.setItem('musicVotes', JSON.stringify(updatedVotes));
-     console.log("💾 Données sauvegardées");
-   } else {
-     console.log("❌ Musique non trouvée");
-   }
-   
-   return updatedVotes;
- });
-};
-
-/**
-* Décrémenter les votes d'une musique
-* @param {string} trackId - ID de la musique à décrémenter
-*/
-const decrementVote = (trackId) => {
- console.log("⬇ Decrement vote pour trackId:", trackId);
- 
- setMusicVotes((prevVotes) => {
-   const updatedVotes = { ...prevVotes };
-   
-   // Vérifier que le cours existe
-   if (!updatedVotes[courseId]) {
-     console.log("Cours non trouvé");
-     return prevVotes;
-   }
-   
-   // Trouver la musique
-   const trackIndex = updatedVotes[courseId].findIndex(
-     (track) => track.trackId === trackId
-   );
-   
-   if (trackIndex >= 0) {
-     // Décrémenter les votes
-     updatedVotes[courseId][trackIndex].votes -= 1;
-     console.log("⬇ Vote décrémenté ! Total:", updatedVotes[courseId][trackIndex].votes);
-     
-     // Si les votes tombent à 0 ou moins, supprimer la musique
-     if (updatedVotes[courseId][trackIndex].votes <= 0) {
-       console.log("Suppression de la musique (votes = 0)");
-       updatedVotes[courseId].splice(trackIndex, 1);
-     }
-     
-     localStorage.setItem('musicVotes', JSON.stringify(updatedVotes));
-     console.log("Données sauvegardées");
-   } else {
-     console.log("Musique non trouvée");
-   }
-   
-   return updatedVotes;
- });
-};
 
   return (
     
@@ -278,10 +147,33 @@ const decrementVote = (trackId) => {
               paddingLeft: "10px",
             }}
           />
-          <Button onClick={search}>Search</Button>
+          <Button onClick={search} disabled={loading}>{loading ? "🔄 Recherche..." : "Search"}</Button>
         </InputGroup>
-      </Container>
+           {/* Affichage des erreurs */}
+           {error && (
+          <div style={{
+            backgroundColor: "#f8d7da",
+            color: "#721c24",
+            padding: "10px",
+            borderRadius: "5px",
+            marginTop: "10px",
+            border: "1px solid #f5c6cb"
+          }}>
+            ⚠️ {error}
+          </div>
+        )}
 
+        {/* Indicateur de chargement */}
+        {loading && (
+          <div style={{
+            textAlign: "center",
+            padding: "20px",
+            fontSize: "18px"
+          }}>
+            🔄 Chargement...
+          </div>
+        )}
+      </Container>
       <Container>
         <Row
           style={{
